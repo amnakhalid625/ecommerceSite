@@ -34,7 +34,6 @@ const Header = () => {
     window.scrollTo(0, 0);
   },[])
 
-  console.log("global state is here ",gobalvariable)
 
   const transfer = (productid,pname)=>{
     // nvg(`/productdetails/${productid}`, {
@@ -51,7 +50,6 @@ const Header = () => {
   }
   
   const {data:searchapidata,isLoading:searchloading,refetch:refetchsearch,isError} = useGetProductBySearchQuery(serchvalue)
-console.log("eeddeeeeeee",isError)
   const searchresult = async (value) => {
 // console.log("kdkdd",searchapidata)
 //     if(value == undefined || value == null || value == ''){     
@@ -165,7 +163,7 @@ refetch()
                     <li>  
                       <div className="p-1 d-flex" style={{gap:"10px",cursor:'pointer'}} onClick={()=>{transfer(item._id,item.title)}} >
                         <div className="imagecontain" style={{width:'47%'}}>
-                        <img src={`http://localhost:8000/uploads/images/${item.product_image1}`} style={{width:'100%',height:'100%'}} className="img-fluid  " alt="product" />
+                        <img src={`http://localhost:8000/public/uploads/images/${item.product_image1}`} style={{width:'100%',height:'100%'}} className="img-fluid  " alt="product" />
                         </div>
                         <div className="cartinfo">
                          <h6 style={{fontSize:'12px',color:'#059fe2',fontWeight:'600',padding:'3px 0px'}}>{item.product_name}</h6>

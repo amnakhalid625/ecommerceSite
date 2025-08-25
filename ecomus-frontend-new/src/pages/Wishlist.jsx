@@ -123,7 +123,7 @@ refetch()
                                         >
                                           {" "}
                                           <img
-                                            src={`http://localhost:8000/uploads/images/${
+                                            src={`http://localhost:8000/public/uploads/images/${
                                               item.product_id != null
                                                 ? item?.product_id
                                                     .product_image1

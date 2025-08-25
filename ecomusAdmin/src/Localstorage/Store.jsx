@@ -14,7 +14,11 @@ const getsoh = ()=>{
 
 const gettoken = ()=>{
   let data = localStorage.getItem('token')
-  return JSON.parse(data)
+  try {
+    return JSON.parse(data);
+  } catch (e) {
+    return data;
+  }
 }
 
 const privateurl = (value)=>{

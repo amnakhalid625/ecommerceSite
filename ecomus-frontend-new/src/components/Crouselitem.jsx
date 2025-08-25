@@ -10,7 +10,7 @@ const Crouselitem = ({item}) => {
                 <div className="product-imgbox">
                   <div className="product-front">
                     <div onClick={()=>{console.log("Dddddccccc")}} className={item._id}>
-                    <img src={`http://localhost:8000/uploads/images/${item.product_image1}`} onClick={()=>{nvg(`/productdetails/${item._id}`)}} alt="" />
+                    <img src={`http://localhost:8000/public/uploads/images/${item.product_image1}`} onClick={()=>{nvg(`/productdetails/${item._id}`)}} alt="" />
                     </div>
                   </div>
 

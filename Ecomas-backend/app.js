@@ -36,7 +36,7 @@ const database = process.env.database || "port not available";
 mongoose.set('strictQuery', false);
 connectdb(database);
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Parse JSON bodies

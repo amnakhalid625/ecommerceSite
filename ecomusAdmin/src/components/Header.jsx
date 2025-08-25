@@ -25,7 +25,6 @@ import { useContactlistlatestQuery } from "../store/api/webinfoapi";
 const Header = () => {
   const nvg = useNavigate();
   const userinfo = gettoken();
-  console.log("this user info",userinfo)
   const logoutevt = async () => {
     removeToken();
     nvg("/");
@@ -33,12 +32,6 @@ const Header = () => {
   const sshh = getsoh();
 
   const { data: userData, isLoading } = useContactlistlatestQuery();
-
-
-console.log("dkdkdkdkkc",userData)
-
-
-
 
   return (
     userinfo ? <div
@@ -82,7 +75,7 @@ console.log("dkdkdkdkkc",userData)
                   {/* <h6 className="ms-auto">Clear All</h6> */}
                 </div>{" "}
                 <hr />
-                {isLoading == false ? userData.data.map((item,index)=>(
+                {!isLoading && userData && userData.data ? userData.data.map((item,index)=>(
                   <>
   <div className="col drop-msg d-flex align-items-start ms-3 col-12">
   <div className="col-3">
