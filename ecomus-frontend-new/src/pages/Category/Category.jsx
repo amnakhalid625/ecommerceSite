@@ -12,7 +12,7 @@ const Category = () => {
   const [pricevalue, setpricevalue] = useState(14000);
   const [brand, setbrand] = useState(true);
   const [color, setcolor] = useState(true);
-  const [size, setsize] = useState(true);
+  const [size, setsize] = useState(true);     
   const [price, setprice] = useState(true);
   const [weight, setweight] = useState(true);
   const [filter, setfilter] = useState(false);

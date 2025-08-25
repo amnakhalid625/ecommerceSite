@@ -12,7 +12,7 @@ const Addbanner = () => {
               className="col-lg-12 d-flex justify-content-between py-2"
               style={{
                 background: "#bcdae9",
-                color: "#0C5398",    
+                color: "#0C5398",        
               }}
             >
               <p className="m-0 customfont">Add Banner</p>
